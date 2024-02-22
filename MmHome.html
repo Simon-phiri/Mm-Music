@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MMMusic Website</title>
+
+        <style>
+            header {
+                background-color: #3498db;
+                padding: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: #ff0000;
+            }
+        
+            #logo {
+                margin: 0;
+                font-size: 24px;
+            }
+        
+            #music {
+                color: rgb(0, 0, 0);
+            }
+        
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+        
+            nav ul li {
+                margin-right: 20px;
+            }
+        
+            .nav-link {
+                text-decoration: none;
+                color: #fafaff;
+            }
+        
+            #search-button {
+                background-color: #fff;
+                border: none;
+                padding: 10px 15px;
+                border-radius: 5px;
+                width: 100px;
+            }
+
+            #search-input-container {
+                display: flex;
+                align-items: center;
+            }
+
+            #search-criteria {
+                padding: 8px;
+                border: 1px solid #fff;
+                border-radius: 5px;
+                font-size: 14px;
+                width: 150px;
+            }
+
+            #popular-search-icon {
+                color: #000000;
+                padding: 8px;
+                cursor: pointer;
+            }
+
+                #popular-search-icon:hover {
+                    color: #3498db;
+                }
+
+                .nav-link:hover {
+                color: #17298f; /* Change color to yellow when hovered */
+            
+                    }
+
+                    main {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                }
+
+                .song-card {
+                    width: calc(20% - 20px);
+                    margin-bottom: 20px;
+                }
+
+                .song-card img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                .song-info {
+                    padding: 10px;
+                    background-color: #f8f9fa;
+                }
+
+                    .song-info h2 {
+                    margin-top: 0;
+                    margin-bottom: 5px;
+                }
+
+                .song-info p {
+                    margin: 10px;
+                    font-size: 24px;
+                }
+
+                main {
+                display: flex;
+                flex-direction: column; /* Set flex direction to column */
+                margin-top: 20px; /* Add margin to the top of the main element */
+            }
+
+                    .song-info h2 a {
+                text-decoration: none; /* Remove underline */
+            }
+
+            
+                            
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1 id="logo">MM <span id="music">Music</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-link">Popular Songs</a></li>
+                        <li><a href="#" class="nav-link">Most Searched</a></li>
+                        <li id="search-input-container"></li>
+                        <input type="text" id="search-criteria" placeholder="Search...">
+                        <i class="fas fa-search" id="popular-search-icon"></i>
+                     </li>
+                </ul>
+            </nav>      
+        </header>
+    
+        <!-- Main Content -->
+        <main>
+            <div class="song-card">
+                <a href="download_page.html">
+                <img src="pictures/pic6.jpg" alt="Song 1">
+            </a>
+                <div class="song-info">
+                    <h2><a href="download_page.html">Beer i love you ft Mlindo_the_vocalist(432k) </a></h2>
+                    <p>Vinchenzo</p>
+                    <p>3:06</p>
+                </div>
+            </div>
+
+            <div class="song-card">
+               
+                <a href="download_page.html">
+                    <img src="pictures/terry.jpg" alt="Song 2">
+                </a>
+                    <div class="song-info">
+                        <h2><a href="download_page.html">_man_must_be_ar_soldier(128k)</a></h2>
+                        <p>Terry_Zambia_jay_Whono</p>
+                        <p>4:52</p>
+                    </div>
+            </div>
+
+            <div class="song-card">
+                <a href="download_page.html">
+                    <img src="pictures/pic7.jpg" alt="Song 3">
+                </a>
+                    <div class="song-info">
+                        <h2><a href="download_page.html">African_Queen ft Cassper Nyovet and Xain </a></h2>
+                        <p>Slap Dee</p>
+                        <p>4:01</p>
+                    </div>
+            </div>
+
+            <div class="song-card">
+                <a href="download_page.html">
+                    <img src="pictures/pic 1.jpg" alt="Song 4">
+                </a>
+                    <div class="song-info">
+                        <h2><a href="download_page.html">Terry_zambia__Ft_Sean_Shmurda_-_Stand_by_you_-_Prod_Mr_RealBeats</a></h2>
+                        <p>Terry Zambia</p>
+                        <p>03:15</p>
+                    </div>
+            </div>
+
+            <div class="song-card">
+                <a href="download_page.html">
+                    <img src="pictures/mm.jpg" alt="Song 5">
+                </a>
+                    <div class="song-info">
+                        <h2><a href="download_page.html"> I Told Them (feat. GZA) [Official Audio](M4A_128K)</a></h2>
+                        <p>Burna Boy -</p>
+                        <p>3:09</p>
+                    </div>
+            </div>
+        </main>
+    
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2023 Your Music Website. All rights reserved.</p>
+        </footer>
+    </body>
+
+
+</html>
