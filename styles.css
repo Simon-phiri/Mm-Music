@@ -7,6 +7,11 @@ header {
     color: #ff0000;
 }
 
+.song-card {
+    width: calc(100% - 20px); /* Set the width to 100% of the container minus the margin */
+    margin-bottom: 20px;
+}
+
 #logo {
     margin: 0;
     font-size: 24px;
