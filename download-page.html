@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Download Page</title>
+</head>
+<body>
+    <h1 id="songTitle">Song Title</h1>
+    <p id="songDetails">Details about the song...</p>
+    <!-- The download link, which will be dynamically updated -->
+    <a href="#" id="downloadLink">Download Now</a>
+
+    <script>
+        // Get the 'song' parameter from the URL
+        const params = new URLSearchParams(window.location.search);
+        const songName = params.get('song');
+
+        // Update the page content based on the selected song
+        document.getElementById('songTitle').textContent = songName.replace(/-/g, ' ').replace('.mp3', '');
+        document.getElementById('songDetails').textContent = 'Download the hit song ' + songName.replace(/-/g, ' ').replace('.mp3', '') + '!';
+        document.getElementById('downloadLink').href = 'songs/' + songName;
+    </script>
+</body>
+</html>
