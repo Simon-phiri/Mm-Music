@@ -29,10 +29,20 @@
     </style>
 </head>
 <body>
+    <?php
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+    ?>
     <div class="container">
         <?php
             // Get the 'song' parameter from the URL
-            $songName = isset($_GET['song']) ? $_GET['song'] : 'Burna-Boy-I-Told-Them-ft-GZA-(JustNaija.com).mp3';
+            $songName = isset($_GET['song']) ? $_GET['song'] : '';
+
+            // If no song parameter is found, show an error
+            if (empty($songName)) {
+                echo "<p>Error: No song specified.</p>";
+                exit;
+            }
 
             // Create a user-friendly song title by replacing hyphens with spaces and removing the file extension
             $songTitle = str_replace('-', ' ', pathinfo($songName, PATHINFO_FILENAME));
