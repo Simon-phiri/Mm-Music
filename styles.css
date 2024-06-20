@@ -1,84 +1,113 @@
-header {
-    background-color: #3498db;
-    padding: 20px;
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    max-width: 100%; /* Ensure body doesn't exceed viewport width */
+}
+
+.red {
+    color: red;
+    font-weight: bold;
+}
+
+.black {
+    color: black;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #ff0000;
+    background-color: blue;
+    padding: 1rem;
+    width: 100%;
 }
 
-#logo {
-    margin: 0;
-    font-size: 24px;
+.brand-title {
+    font-size: 1.1rem;
+    color: white;
+    font-weight: bold;
 }
 
-#music {
-    color: rgb(0, 0, 0);
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.navbar-links ul {
+    list-style: none;
     display: flex;
 }
 
-nav ul li {
-    margin-right: 20px;
+.navbar-links li {
+    margin-left: 5rem;
 }
 
-.nav-link {
+.navbar-links a {
     text-decoration: none;
-    color: #fafaff;
+    color: white;
+    font-size: 1.1rem;
 }
 
-#search-input-container {
-    display: flex;
-    align-items: center;
-}
-
-#search-criteria {
-    padding: 8px;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    font-size: 14px;
-    width: 150px;
-}
-
-#popular-search-icon {
-    color: #000000;
-    padding: 8px;
+.toggle-button {
+    display: none; /* Initially hide the toggle button */
+    flex-direction: column;
     cursor: pointer;
+    position: relative;
 }
 
-#popular-search-icon:hover {
-    color: #3498db;
+.toggle-button .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
 }
 
-.nav-link:hover {
-    color: #17298f;
+.toggle-button .arrow {
+    display: none;
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+/* When the toggle button is active, show the arrow and hide the bars */
+.toggle-button.active .bar {
+    display: none;
+}
+
+.toggle-button.active .arrow {
+    display: block;
 }
 
 main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
 }
 
 .song-card {
-    width: calc(100% - 20px);
+    width: calc(33.33% - 20px);
     margin-bottom: 20px;
 }
 
 .song-card img {
-    width: 70%;
-    height: auto;
+    width: 100%;
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
+    object-position: top; /* Focus on the top part of the image */
 }
 
 .song-info {
     padding: 10px;
-    background-color: #f8f9fa;
-    font-size: 12px;
+    text-align: center;
+    background-color: darkgrey;
 }
 
 .song-info h2 {
@@ -87,10 +116,113 @@ main {
 }
 
 .song-info p {
-    margin: 10px;
-    font-size: 24px;
+    margin: 10px 0;
 }
 
 .song-info h2 a {
-    text-decoration: none;
+    font-size: 12px;
+}
+
+/* Media Queries */
+
+/* Tablets and small desktops */
+@media (max-width: 1024px) {
+    .navbar {
+        width: 100%;
+        padding: 1rem;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .black {
+        font-size: 24px;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .toggle-button {
+        display: flex; /* Show toggle button on smaller screens */
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .song-card {
+        width: 100%;
+    }
+
+    .song-info {
+        width: auto;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .toggle-button {
+        display: flex; /* Show toggle button on smaller screens */
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .song-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .song-card img {
+        width: 100%;
+        height: 200px; /* Set a fixed height */
+        object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
+        object-position: top; /* Focus on the top part of the image */
+    }
+
+    .song-info {
+        padding: 10px;
+        background-color: darkgrey;
+        width: 100%;
+    }
+
+    .song-info h2 {
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+
+    .song-info p {
+        margin: 10px 0;
+    }
+
+    .song-info h2 a {
+        font-size: 12px;
+    }
 }
