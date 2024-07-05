@@ -11,6 +11,47 @@ body {
     max-width: 100%; /* Ensure body doesn't exceed viewport width */
 }
 
+.song-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.icon-container {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  margin: 0 10px; /* add some margin between icons */
+}
+
+.icon-container i {
+  font-size: 16px;
+}
+
+.icon-container span.icon-count {
+  font-size: 12px;
+  color: #666; /* adjust the color to your liking */
+  text-align: center;
+}
+
+/* Add specific styles for each icon */
+.song-actions .icon-container:first-child i {
+  color: #007bff; /* like icon */
+}
+
+.song-actions .icon-container:nth-child(2) i {
+  color: #ff69b4; /* love icon */
+}
+
+.song-actions .icon-container:nth-child(3) i {
+  color: #ffcc00; /* comment icon */
+}
+
+.song-actions .icon-container:last-child i {
+  color: #007bff; /* view icon */
+}
+
 .red {
     color: red;
     font-weight: bold;
